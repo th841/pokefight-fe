@@ -1,12 +1,12 @@
 <main class="main">
-  <mat-toolbar class="toolbar">
+  <mat-toolbar color="primary">
     <span>{{ title() }}</span>
   </mat-toolbar>
 
   <mat-tab-group mat-align-tabs="center" (selectedIndexChange)="onTabChange($event)">
 
     <mat-tab label="Battle">
-      <button mat-button color="primary" (click)="onFightButtonClick()">
+      <button matButton="tonal" color="primary" (click)="onFightButtonClick()">
         Fight
       </button>
       @if(pokemons[0]){
@@ -29,34 +29,7 @@
     </mat-tab>
 
     <mat-tab label="Fight History">
-      <div class="fights-table">
-        <table mat-table [dataSource]="fights" class="mat-elevation-z8">
-
-          <!-- Fighters Column -->
-          <ng-container matColumnDef="fighters">
-            <th mat-header-cell *matHeaderCellDef> Fighters </th>
-            <td mat-cell *matCellDef="let fight">
-              <div>
-                <strong>{{ fight.fighters[0].name }}</strong> ({{ fight.fighters[0].types.join(', ') }}, {{
-                fight.fighters[0].power }})<br>
-                <strong>{{ fight.fighters[1].name }}</strong> ({{ fight.fighters[1].types.join(', ') }}, {{
-                fight.fighters[1].power }})
-              </div>
-            </td>
-          </ng-container>
-
-          <!-- Winner Column -->
-          <ng-container matColumnDef="winner">
-            <th mat-header-cell *matHeaderCellDef> Winner </th>
-            <td mat-cell *matCellDef="let fight">
-              {{ fight.winner.name }}
-            </td>
-          </ng-container>
-
-          <tr mat-header-row *matHeaderRowDef="['fighters', 'winner']"></tr>
-          <tr mat-row *matRowDef="let row; columns: ['fighters', 'winner']"></tr>
-        </table>
-      </div>
+      <fight-history #fighthistory></fight-history>
     </mat-tab>
   </mat-tab-group>
 </main>

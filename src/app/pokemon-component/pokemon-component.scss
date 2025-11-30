@@ -1,0 +1,37 @@
+.pokemon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 150px;
+  text-align: center;
+  background: var(--mat-sys-primary-container);
+}
+
+.pokemon-image {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 8px;
+}
+
+.pokemon-properties {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+}
+
+.property {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prop-name {
+  font-weight: bold;
+}
+
+.prop-value {
+  text-align: right;
+}
