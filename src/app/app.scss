@@ -1,0 +1,62 @@
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: lightblue;
+}
+
+.pokemon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  width: 100%;
+}
+
+.right-side {
+  text-align: right;
+  width: 10%;
+  font-size: 20px;
+}
+
+.left-side {
+  text-align: left;
+  width: 10%;
+  font-size: 20px;
+}
+
+.vs {
+  font-size: 32px;
+  text-align: center;
+}
+
+.winner {
+  margin-top: 20px;
+  text-align: center;
+  margin-left: 45%;
+  width: 10%;
+}
+
+table.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.mat-table th,
+table.mat-table td {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+table.mat-table tr:nth-child(even) {
+  background-color: #817979;
+}
+
+table.mat-table tr:hover {
+  background-color: #e0f7fa;
+}
+
+th.mat-header-cell {
+  background-color: #4374a5;
+  color: rgb(146, 118, 118);
+}
